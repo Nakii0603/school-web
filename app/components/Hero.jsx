@@ -1,8 +1,6 @@
-import Eye from "@/public/eye";
-
 export default function Focus() {
   return (
-    <div className="flex gap-10 flex-wrap">
+    <div className="flex gap-10 flex- mx-auto max-w-[1440px] ">
       <div className="flex flex-col">
         <div className="bgEye"></div>
         <h3 className="">АЛСЫН ХАРАА</h3>
