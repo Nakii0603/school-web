@@ -17,7 +17,7 @@ export default function NavBar() {
       <div className=" hidden max-md:block">
         <Logo className="w-[130px] " />
       </div>
-      <div className="flex items-center gap-10 max-md:hidden">
+      <div className="flex items-center max-xl:gap-8 gap-10 max-lg:gap-2 max-md:hidden">
         <Logo className="w-[130px]" />
         <a href="/">Нүүр</a>
         <a href="about">Бидний тухай</a>
