@@ -21,7 +21,10 @@ export default function NavBar() {
 
   return (
     <div className="flex text-[#1D4ED8] max-w-[1440px] justify-between mx-auto mt-[20px] font-semibold">
-      <div className="flex items-center gap-10">
+      <div className=" hidden max-md:block">
+        <Logo className="w-[130px] " />
+      </div>
+      <div className="flex items-center gap-10 max-md:hidden">
         <Logo className="w-[130px]" />
         {navItems.map(({ label, index, url }) => (
           <a
@@ -71,12 +74,15 @@ export default function NavBar() {
           )}
         </div>
       </div>
-      <div
-        onClick={jumpingForm}
-        className="bg-[#1D4ED8] mr-4 h-[40px] items-center text-white border-box p-[6px] m rounded-lg cursor-pointer"
-      >
-        Бүртгүүлэх
+      <div className="flex items-center">
+        <div
+          onClick={jumpingForm}
+          className="bg-[#1D4ED8] flex items-center max-md:hidden mr-4 h-[40px] text-white border-box p-[6px] rounded-lg cursor-pointer"
+        >
+          Бүртгүүлэх
+        </div>
       </div>
+      <div className="mr-4 max-md:block hidden ">menu</div>
     </div>
   );
 }
