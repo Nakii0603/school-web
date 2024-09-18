@@ -1,7 +1,6 @@
 import Arrow from "@/public/Arrow";
-import Love from "@/public/Love";
 import Eye from "@/public/Eye";
-
+import Love from "@/public/Love";
 
 export default function Focus() {
   return (
