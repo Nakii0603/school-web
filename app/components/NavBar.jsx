@@ -1,7 +1,82 @@
-import React from 'react'
+"use client";
+import { useState } from "react";
+import Logo from "@/public/Logo";
 
 export default function NavBar() {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function jumpingForm() {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSc8qHUhVTu_eo8KngORhaEPBhZ6Mkbhdg6ynzwoHD266jQRkw/closedform",
+      "_blank"
+    );
+  }
+
+  const navItems = [
+    { label: "Нүүр", index: 0, url: "/" },
+    { label: "Хөтөлбөр", index: 2, url: "pages/program" },
+    { label: "Холбоо барих", index: 3, url: "pages/contact" },
+  ];
+
   return (
-    <div>NavBar</div>
-  )
+    <div className="flex text-[#1D4ED8] max-w-[1440px] justify-between mx-auto mt-[20px] font-semibold">
+      <div className="flex items-center gap-10">
+        <Logo className="w-[130px]" />
+        {navItems.map(({ label, index, url }) => (
+          <a
+            key={index}
+            href={url}
+            onClick={() => setActiveIndex(index)}
+            className={`${
+              activeIndex === index ? "underline" : ""
+            } transition duration-300`}
+          >
+            {label}
+          </a>
+        ))}
+        <div
+          className="flex items-center gap-3 relative"
+          onMouseEnter={() => setIsOpen(true)}
+          onMouseLeave={() => setIsOpen(false)}
+        >
+          <div className="flex items-center gap-3">
+            <a href="" className={`hover:bg-white ${isOpen ? "bg-white" : ""}`}>
+              Бидний тухай
+            </a>
+            <span className="triangle mt-[5px]"></span>
+          </div>
+
+          {isOpen && (
+            <div className="bg-[#dfdfdf5b] flex flex-col absolute mt-[170px]">
+              <a
+                className="aboutMenu w-[130px] text-black h-[50px] flex justify-center items-center"
+                href=""
+              >
+                Option 1
+              </a>
+              <a
+                className="aboutMenu w-[130px] text-black h-[50px] flex justify-center items-center"
+                href=""
+              >
+                Option 1
+              </a>
+              <a
+                className="aboutMenu w-[130px] text-black h-[50px] flex justify-center items-center"
+                href=""
+              >
+                Option 1
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+      <div
+        onClick={jumpingForm}
+        className="bg-[#1D4ED8] mr-4 h-[40px] items-center text-white border-box p-[6px] m rounded-lg cursor-pointer"
+      >
+        Бүртгүүлэх
+      </div>
+    </div>
+  );
 }
