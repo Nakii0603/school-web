@@ -48,24 +48,24 @@ export default function NavBar() {
           </div>
 
           {isOpen && (
-            <div className="bg-[#dfdfdf5b] flex flex-col absolute mt-[170px]">
+            <div className="bg-[#dfdfdf5b] rounded-md flex flex-col absolute mt-[170px]">
               <a
-                className="aboutMenu w-[130px] text-black h-[50px] flex justify-center items-center"
+                className="aboutMenu rounded-md w-[130px] text-black h-[50px] flex justify-center items-center"
                 href=""
               >
-                Option 1
+                Танилцуулга
               </a>
               <a
-                className="aboutMenu w-[130px] text-black h-[50px] flex justify-center items-center"
+                className="aboutMenu rounded-md w-[130px] text-black h-[50px] flex justify-center items-center"
                 href=""
               >
-                Option 1
+                Мэндчилгээ
               </a>
               <a
-                className="aboutMenu w-[130px] text-black h-[50px] flex justify-center items-center"
+                className="aboutMenu rounded-md w-[130px] text-black h-[50px] flex justify-center items-center"
                 href=""
               >
-                Option 1
+                Бидний амжилт
               </a>
             </div>
           )}

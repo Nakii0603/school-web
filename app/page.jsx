@@ -1,10 +1,12 @@
-import React from 'react'
+"use client"
+import Focus from './components/Hero';
 import NavBar from './components/NavBar'
 
 export default function page() {
   return (
     <div>
-      <NavBar/>
+      <NavBar  />
+      <Focus />
     </div>
-  )
+  );
 }
