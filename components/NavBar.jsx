@@ -3,7 +3,6 @@ import { useState } from "react";
 import Logo from "@/public/Logo";
 
 export default function NavBar() {
-  const [activeIndex, setActiveIndex] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
   function jumpingForm() {
@@ -13,12 +12,6 @@ export default function NavBar() {
     );
   }
 
-  const navItems = [
-    { label: "Нүүр", index: 0, url: "/" },
-    { label: "Хөтөлбөр", index: 2, url: "pages/program" },
-    { label: "Холбоо барих", index: 3, url: "pages/contact" },
-  ];
-
   return (
     <div className="flex text-[#1D4ED8] max-w-[1440px] justify-between mx-auto mt-[20px] font-semibold">
       <div className=" hidden max-md:block">
@@ -26,18 +19,10 @@ export default function NavBar() {
       </div>
       <div className="flex items-center gap-10 max-md:hidden">
         <Logo className="w-[130px]" />
-        {navItems.map(({ label, index, url }) => (
-          <a
-            key={index}
-            href={url}
-            onClick={() => setActiveIndex(index)}
-            className={`${
-              activeIndex === index ? "underline" : ""
-            } transition duration-300`}
-          >
-            {label}
-          </a>
-        ))}
+        <a href="/">Нүүр</a>
+        <a href="about">Бидний тухай</a>
+        <a href="program">Хөтөлбөр</a>
+        <a href="contact">Холбоо барих</a>
         <div
           className="flex items-center gap-3 relative"
           onMouseEnter={() => setIsOpen(true)}
@@ -82,7 +67,7 @@ export default function NavBar() {
           Бүртгүүлэх
         </div>
       </div>
-      <div className="mr-4 max-md:block hidden ">menu</div>
+      <div className="mr-4 max-md:block hidden">menu</div>
     </div>
   );
 }
