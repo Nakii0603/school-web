@@ -52,7 +52,7 @@ export default function NavBar(jumpToForm) {
       </div>
       <div className="hidden max-md:flex">
         {isMenuOpen && (
-          <div className="max-md:flex flex-col hidden">
+          <div className="max-md:flex flex-col hidden w-[100%]">
             {menuItems.map((item) => (
               <a
                 key={item.id}
