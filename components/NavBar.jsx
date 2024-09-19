@@ -1,9 +1,23 @@
 "use client";
-import { useState } from "react";
 import Logo from "@/public/Logo";
+import { useState } from "react";
+import LoginForm from "./LoginForm";
 
+const MenuItems = () => (
+  <>
+    <a href="#">Нүүр</a>
+    <a href="">Бидний тухай</a>
+    <a href="">Хөтөлбөр</a>
+    <a href="">Холбоо барих</a>
+  </>
+);
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   function jumpingForm() {
     window.open(
@@ -13,16 +27,13 @@ export default function NavBar() {
   }
 
   return (
-    <div className="flex text-[#1D4ED8] max-w-[1440px] justify-between mx-auto mt-[20px] font-semibold">
+    <div className="flex text-[#1D4ED8] relative max-w-[1440px] justify-between mx-auto mt-[20px] font-semibold">
       <div className=" hidden max-md:block">
-        <Logo className="w-[130px] " />
+        <Logo />
       </div>
       <div className="flex items-center max-xl:gap-8 gap-10 max-lg:gap-2 max-md:hidden">
-        <Logo className="w-[130px]" />
-        <a href="/">Нүүр</a>
-        <a href="about">Бидний тухай</a>
-        <a href="program">Хөтөлбөр</a>
-        <a href="contact">Холбоо барих</a>
+        <Logo />
+        <MenuItems />
         <div
           className="flex items-center gap-3 relative"
           onMouseEnter={() => setIsOpen(true)}
@@ -67,7 +78,25 @@ export default function NavBar() {
           Бүртгүүлэх
         </div>
       </div>
-      <div className="mr-4 max-md:block hidden">menu</div>
+
+      <div className="max-md:flex justify-center flex-col hidden relative">
+        <button
+          className={`menu-btn mr-4 ${isMenuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        >
+          <span className="bar bar1"></span>
+          <span className="bar bar2"></span>
+          <span className="bar bar3"></span>
+        </button>
+      </div>
+      <div
+        className={`text-black absolute  top-16  flex-col ${
+          isMenuOpen ? "flex" : "hidden"
+        }`}
+      >
+        <MenuItems />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import Arrow from "@/public/Arrow";
-import Eye from "@/public/Eye";
 import Love from "@/public/Love";
 
 export default function Focus() {
@@ -7,7 +6,11 @@ export default function Focus() {
     <div className="flex m-auto max-w-[1440px] mt-[100px] ">
       <div className="flex justify-between w-[100%]">
         <div className="flex flex-col items-center max-w-[350px]">
-          <Eye />
+          <img 
+          className="w-[130px]"
+            src="https://nomiinys1-ddb3d4.ingress-haven.ewp.live/wp-content/uploads/2024/05/eye.webp"
+            alt=""
+          />
           <h3 className="text-[32px] max-md:text-[24px] ">АЛСЫН ХАРАА</h3>
           <p className="text-center">
             Гадаад хэлэнд суурилсан бүрэн дунд боловсролтой, дэлхийд өрсөлдөх
