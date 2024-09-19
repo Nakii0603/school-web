@@ -4,7 +4,7 @@ import Love from "@/public/Love";
 export default function Focus() {
   return (
     <div className="flex m-auto max-w-[1440px] mt-[100px] ">
-      <div className="flex justify-between w-[100%]">
+      <div className="flex justify-between gap-3 max-md:flex-col max-md:items-center w-[100%]">
         <div className="flex flex-col items-center max-w-[350px]">
           <img 
           className="w-[130px]"
