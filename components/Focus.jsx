@@ -1,13 +1,14 @@
-import Arrow from "@/public/Arrow";
-import Love from "@/public/Love";
+import Arrow from "@/public/imgJS/Arrow";
+import Love from "@/public/imgJS/Love";
+
 
 export default function Focus() {
   return (
     <div className="flex m-auto max-w-[1440px] mt-[100px] ">
       <div className="flex justify-between gap-3 max-md:flex-col max-md:items-center w-[100%]">
         <div className="flex flex-col items-center max-w-[350px]">
-          <img 
-          className="w-[130px]"
+          <img
+            className="w-[130px]"
             src="https://nomiinys1-ddb3d4.ingress-haven.ewp.live/wp-content/uploads/2024/05/eye.webp"
             alt=""
           />

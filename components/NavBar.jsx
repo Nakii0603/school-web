@@ -1,5 +1,5 @@
 "use client";
-import Logo from "@/public/Logo";
+import Logo from "@/public/imgJS/Logo";
 import { useState } from "react";
 import About from "./About";
 import { LoginForm, LoginForm2 } from "./LoginForm";

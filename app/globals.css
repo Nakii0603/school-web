@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.all-1000 {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+}
+
 .triangle {
   border-top: 8px solid #1d4ed8;
   border-right: 5px solid transparent;
@@ -60,4 +66,18 @@
 .menu-btn.active .bar3 {
   transform: rotate(-45deg);
   top: 8px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
 }
