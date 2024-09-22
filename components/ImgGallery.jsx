@@ -1,5 +1,6 @@
-import React from "react";
 import Gallery1 from "@/public/imgJS/Gallery1";
+import React from "react";
+
 
 export default function ImgGallery() {
   return (
@@ -10,7 +11,7 @@ export default function ImgGallery() {
           className="fade-in"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
-          <Gallery1 className="w-full" />
+          <Gallery1 className="w-full " />
         </div>
       ))}
     </div>

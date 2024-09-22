@@ -1,7 +1,6 @@
 import Arrow from "@/public/imgJS/Arrow";
 import Love from "@/public/imgJS/Love";
 
-
 export default function Focus() {
   return (
     <div className="flex m-auto max-w-[1440px] mt-[100px] ">
