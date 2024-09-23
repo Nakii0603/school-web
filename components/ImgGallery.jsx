@@ -27,7 +27,7 @@ import Gallery24 from "@/public/imgJS/Gallery24";
 export default function ImgGallery() {
   return (
     <div className="max-w-[1440px] m-auto mt-[100px]">
-      <div className="flex h-[2470px] gap-[5px]">
+      <div className="flex h-[2470px] max-md:h-[2900px] gap-[5px]">
         <div className="flex max-md:flex-wrap items-start gap-[5px]">
           <div className="test">
             <Gallery1 className="w-full" />

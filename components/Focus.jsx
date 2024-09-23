@@ -3,7 +3,7 @@ import Love from "@/public/imgJS/Love";
 
 export default function Focus() {
   return (
-    <div className="flex m-auto  max-w-[1440px] items-center ">
+    <div className="flex m-auto my-[200px] max-md:my-[100px] max-lg:my-[150px]  max-w-[1440px] items-center ">
       <div className="flex justify-between gap-3 max-md:flex-col max-md:items-center w-[100%]">
         <div className="flex flex-col items-center max-w-[350px]">
           <img
