@@ -7,7 +7,7 @@ export default function page() {
   return (
     <div>
       <NavBar />
-      {/* <Focus /> */}
+      <Focus />
       <ImgGallery />
     </div>
   );
