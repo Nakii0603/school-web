@@ -68,6 +68,23 @@
   top: 8px;
 }
 
-.test img{
-  max-width: 360px;
+.test{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
+
+.test img {
+  width: 100%;
+  max-width: 385px;
+  border-radius: 8px;
+  transition: filter 0.3s ease;
+}
+
+.test img:hover {
+  filter: brightness(0.7);
+  background-color: rgba(0, 0, 0, 0.3); 
+  background-blend-mode: darken; 
+}
+
