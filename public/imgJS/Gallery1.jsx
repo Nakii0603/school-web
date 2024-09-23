@@ -2,7 +2,7 @@ export default function Gallery1() {
   return (
     <div className="">
       <img
-        className="w-[255px] max-md:w-[50%] all-1000 rounded-[14px]"
+        className="all-1000 "
         src="./img/Gallery1.png"
         alt=""
       />
