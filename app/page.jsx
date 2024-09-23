@@ -1,6 +1,7 @@
 "use client";
 import Focus from "@/components/Focus";
 import ImgGallery from "@/components/ImgGallery";
+import LoudingGallery from "@/components/LoudingGallery";
 import NavBar from "@/components/NavBar";
 
 export default function page() {
@@ -8,7 +9,7 @@ export default function page() {
     <div>
       <NavBar />
       <Focus />
-      <ImgGallery />
+      <LoudingGallery />
     </div>
   );
 }
