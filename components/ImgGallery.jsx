@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Gallery1 from "@/public/imgJS/Gallery1";
 import Gallery2 from "@/public/imgJS/Gallery2";
 import Gallery3 from "@/public/imgJS/Gallery3";
@@ -24,45 +24,58 @@ import Gallery22 from "@/public/imgJS/Gallery22";
 import Gallery23 from "@/public/imgJS/Gallery23";
 import Gallery24 from "@/public/imgJS/Gallery24";
 
+const images = [
+  <Gallery1 className="w-full" />,
+  <Gallery2 className="w-full" />,
+  <Gallery3 className="w-full" />,
+  <Gallery4 className="w-full" />,
+  <Gallery5 className="w-full" />,
+  <Gallery6 className="w-full" />,
+  <Gallery7 className="w-full" />,
+  <Gallery8 className="w-full" />,
+  <Gallery9 className="w-full" />,
+  <Gallery10 className="w-full" />,
+  <Gallery11 className="w-full" />,
+  <Gallery12 className="w-full" />,
+  <Gallery13 className="w-full" />,
+  <Gallery14 className="w-full" />,
+  <Gallery15 className="w-full" />,
+  <Gallery16 className="w-full" />,
+  <Gallery17 className="w-full" />,
+  <Gallery18 className="w-full" />,
+  <Gallery19 className="w-full" />,
+  <Gallery20 className="w-full" />,
+  <Gallery21 className="w-full" />,
+  <Gallery22 className="w-full" />,
+  <Gallery23 className="w-full" />,
+  <Gallery24 className="w-full" />,
+];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 export default function ImgGallery() {
+  const [shuffledImages, setShuffledImages] = useState([]);
+
+  useEffect(() => {
+    setShuffledImages(shuffleArray([...images]));
+  }, []);
+
   return (
     <div className="max-w-[1440px] m-auto mt-[100px]">
       <div className="flex h-fit gap-[5px]">
         <div className="flex max-md:flex-wrap items-start gap-[5px] h-fit">
-          <div className="test ">
-            <Gallery1 className="w-full" />
-            <Gallery2 className="w-full" />
-            <Gallery3 className="w-full" />
-            <Gallery4 className="w-full" />
-            <Gallery5 className="w-full" />
-            <Gallery6 className="w-full" />
-          </div>
-          <div className="test ">
-            <Gallery7 className="w-full" />
-            <Gallery8 className="w-full" />
-            <Gallery9 className="w-full" />
-            <Gallery10 className="w-full" />
-            <Gallery11 className="w-full" />
-            <Gallery12 className="w-full" />
-          </div>
+          <div className="gallery ">{shuffledImages.slice(0, 6)}</div>
+          <div className="gallery ">{shuffledImages.slice(6, 12)}</div>
         </div>
         <div className="flex max-md:flex-wrap gap-[5px] h-fit">
-          <div className="test">
-            <Gallery13 className="w-full" />
-            <Gallery14 className="w-full" />
-            <Gallery15 className="w-full" />
-            <Gallery16 className="w-full" />
-            <Gallery17 className="w-full" />
-            <Gallery18 className="w-full" />
-          </div>
-          <div className="test">
-            <Gallery19 className="w-full" />
-            <Gallery20 className="w-full" />
-            <Gallery21 className="w-full" />
-            <Gallery22 className="w-full" />
-            <Gallery23 className="w-full" />
-            <Gallery24 className="w-full" />
-          </div>
+          <div className="gallery">{shuffledImages.slice(12, 18)}</div>
+          <div className="gallery">{shuffledImages.slice(18, 24)}</div>
         </div>
       </div>
     </div>
