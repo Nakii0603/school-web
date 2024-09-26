@@ -8,7 +8,7 @@ export default function LoadingGallery() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
