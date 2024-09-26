@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Gallery1 from "@/public/imgJS/Gallery1";
 import Gallery2 from "@/public/imgJS/Gallery2";
 import Gallery3 from "@/public/imgJS/Gallery3";

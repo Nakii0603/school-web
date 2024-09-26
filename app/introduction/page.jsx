@@ -6,6 +6,7 @@ export default function page() {
   return (
     <div className="max-w-[1440px] m-auto">
       <NavBar />
+      intro
       <Footer />
       <Foot />
     </div>

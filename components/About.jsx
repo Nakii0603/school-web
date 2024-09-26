@@ -5,9 +5,9 @@ export default function About() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const menuItemsBar = [
-    { name: "Танилцуулга", href: "/" },
-    { name: "Мэндчилгээ", href: "/" },
-    { name: "Бидний амжилт", href: "/" },
+    { name: "Танилцуулга", href: "/introduction" },
+    { name: "Мэндчилгээ", href: "/greetings" },
+    { name: "Бидний амжилт", href: "/ourSuccess" },
   ];
   const jumpAbout = () => {
     router.push("/about");

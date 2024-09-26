@@ -1,10 +1,13 @@
+import Foot from "@/components/Foot";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 
 export default function page() {
   return (
-    <div>
+    <div className="max-w-[1440px] m-auto">
       <NavBar />
-      <p>contact</p>
+      <Footer />
+      <Foot />
     </div>
   );
 }

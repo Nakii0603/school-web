@@ -1,8 +1,9 @@
 "use client";
 import Focus from "@/components/Focus";
 import Footer from "@/components/Footer";
-import LoudingGallery from "@/components/LoudingGallery";
 import NavBar from "@/components/NavBar";
+import LoudingGallery from "@/components/LoudingGallery";
+import Foot from "@/components/Foot";
 
 export default function page() {
   return (
@@ -11,6 +12,7 @@ export default function page() {
       <Focus />
       <LoudingGallery />
       <Footer />
+      <Foot />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+"use client"
 import Logo2 from "@/public/imgJS/Logo2";
 
 export default function Footer() {
