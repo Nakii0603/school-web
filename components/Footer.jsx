@@ -7,9 +7,9 @@ export default function Footer() {
   };
 
   return (
-    <div className="max-w-[1440px] m-auto my-[100px]">
+    <div className="max-w-[1440px] m-auto my-[100px] px-5">
       <div className="flex max-w-[1000px] justify-between gap-2 max-sm:flex-wrap-reverse ">
-        <div className="flex flex-col gap-6 max-md:ml-10">
+        <div className="flex flex-col gap-6 max-md:ml-[20px]">
           <Logo2 className="max-sm:hidden" />
           <div className="flex gap-4 items-center ">
             <svg
@@ -46,7 +46,7 @@ export default function Footer() {
             Боловсрол олгох нь сэтгэлээсээ хийх ажил юм.
           </p>
         </div>
-        <div className="flex flex-col gap-1 max-md:ml-10">
+        <div className="flex flex-col gap-1 max-md:ml-[20px]">
           <h2 className="text-[22px] font-bold">Холбоо барих</h2>
           <p>Утас:99662457</p>
           <p>Ажлын хуваарь: Даваа-Баасан 9:00- 18:00PM</p>

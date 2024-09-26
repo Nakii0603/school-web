@@ -15,7 +15,7 @@ export default function page() {
         <Typing />
         <p>хөтөлбөр</p>
       </div>
-      <div className="flex mt-[30px] w-[100%] gap-10 justify-center">
+      <div className="flex mt-[30px] w-[100%] gap-10 max-md:flex-wrap justify-center">
         <div className="w-[330px]">
           <Program1 className="w-[330px]" />
           <p className="text-[28px]">Бага анги I-V</p>
