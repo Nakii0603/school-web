@@ -1,12 +1,18 @@
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function About() {
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   const menuItemsBar = [
     { name: "Танилцуулга", href: "/" },
     { name: "Мэндчилгээ", href: "/" },
     { name: "Бидний амжилт", href: "/" },
   ];
-  const [isOpen, setIsOpen] = useState(false);
+  const jumpAbout = () => {
+    router.push("/about");
+  };
+
   return (
     <div
       className="flex items-center gap-3 relative max-md:hidden"
@@ -14,7 +20,10 @@ export default function About() {
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="flex items-center gap-3">
-        <a href="" className={`hover:bg-white ${isOpen ? "bg-white" : ""}`}>
+        <a
+          onClick={jumpAbout}
+          className={`hover:bg-white cursor-pointer ${isOpen ? "bg-white" : ""}`}
+        >
           Бидний тухай
         </a>
         <span className="triangle mt-[5px]"></span>

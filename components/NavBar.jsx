@@ -1,20 +1,18 @@
 "use client";
 import Logo from "@/public/imgJS/Logo";
-import { useState } from "react";
 import About from "./About";
+import { useState } from "react";
 import { LoginForm, LoginForm2 } from "./LoginForm";
 
 const menuItems = [
   { id: 1, label: "Нүүр", href: "/" },
-  { id: 2, label: "Бидний тухай", href: "/about" },
   { id: 3, label: "Хөтөлбөр", href: "/program" },
   { id: 4, label: "Холбоо барих", href: "/contact" },
 ];
 
-export default function NavBar(jumpToForm) {
+export default function NavBar(jumpToForm, jumpAbout) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -35,7 +33,7 @@ export default function NavBar(jumpToForm) {
               </a>
             ))}
           </div>
-          <About setIsOpen={setIsOpen} isOpen={isOpen} />
+          <About jumpAbout={jumpAbout} setIsOpen={setIsOpen} isOpen={isOpen} />
         </div>
         <LoginForm jumpToForm={jumpToForm} />
         <div className="max-md:flex justify-center flex-col hidden relative">
