@@ -2,9 +2,10 @@ import { Typing } from "@/components/Type";
 import Foot from "@/components/Foot";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
-import Program1 from "@/public/imgJS/program1";
+
 import Program2 from "@/public/imgJS/Program2";
 import Program3 from "@/public/imgJS/Program3";
+import Program1 from "@/public/imgJS/Program1";
 
 export default function page() {
   return (
