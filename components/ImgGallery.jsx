@@ -67,7 +67,7 @@ export default function ImgGallery() {
   }, []);
 
   return (
-    <div className="max-w-[1440px] m-auto mt-[100px]">
+    <div className="max-w-[1440px] m-auto mt-[100px] mx-5">
       <div className="flex h-fit gap-[5px]">
         <div className="flex max-md:flex-wrap items-start gap-[5px] h-fit">
           <div className="gallery ">{shuffledImages.slice(0, 6)}</div>

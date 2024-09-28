@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 export const Typing = () => {
   return (
     <TypeAnimation
-      className="text-[#22AAF5] vt323-regular"
+      className="text-[#22AAF5] vt323-regular text-[42px] max-md:text-[36px]"
       sequence={[
         "Цөм 1-5 анги",
         3000,
@@ -17,7 +17,7 @@ export const Typing = () => {
       ]}
       wrapper="span"
       speed={10}
-      style={{ fontSize: "42px", display: "inline-block" }}
+      style={{display: "inline-block" }}
       repeat={Infinity}
     />
   );

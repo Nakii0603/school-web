@@ -13,18 +13,22 @@ export default function LoadingGallery() {
     return () => clearTimeout(timer);
   }, []);
 
-  const loadingItems = Array.from({ length: 4 }); 
+  const loadingItems = Array.from({ length: 2 });
 
   return (
     <div className="flex justify-center">
       {loading ? (
-        <div className="flex flex-col gap-[5px]">
+        <div className="flex flex-col gap-[5px] ">
           {loadingItems.map((_, index) => (
-            <div className="flex gap-[5px]" key={index}>
-              <Loading />
-              <Loading />
-              <Loading />
-              <Loading />
+            <div className=" flex gap-2" key={index}>
+              <div className="flex gap-2 max-md:flex-col">
+                <Loading />
+                <Loading />
+              </div>
+              <div className="flex gap-2 max-md:flex-col">
+                <Loading />
+                <Loading />
+              </div>
             </div>
           ))}
         </div>
