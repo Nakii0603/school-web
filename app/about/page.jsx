@@ -7,7 +7,6 @@ export default function page() {
     <div className="max-w-[1440px] m-auto">
       <NavBar />
       <Footer />
-      <h1>hi</h1>
       <Foot />
     </div>
   );
