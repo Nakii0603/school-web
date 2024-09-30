@@ -3,6 +3,7 @@ import Logo from "@/public/imgJS/Logo";
 import About from "./About";
 import { useState } from "react";
 import { LoginForm, LoginForm2 } from "./LoginForm";
+import AboutMenu from "./AboutMenu";
 
 const menuItems = [
   { id: 1, label: "Нүүр", href: "/" },
@@ -20,9 +21,9 @@ export default function NavBar(jumpToForm, jumpAbout) {
   return (
     <div className=" text-[#1D4ED8] relative max-w-[1440px]  mx-auto mt-[20px] font-semibold">
       <div className="flex justify-between w-[100%]">
-        <div className="max-xl:gap-8 gap-10 max-lg:gap-2 flex items-center ml-4">
+        <div className="max-xl:gap-8 gap-10 max-lg:gap-4 flex items-center ml-4">
           <Logo />
-          <div className="max-xl:gap-8 gap-10 max-lg:gap-2 flex max-md:hidden ">
+          <div className="max-xl:gap-8 gap-10 max-lg:gap-4 flex max-md:hidden ">
             {menuItems.map((item) => (
               <a
                 key={item.id}
@@ -60,6 +61,11 @@ export default function NavBar(jumpToForm, jumpAbout) {
                 {item.label}
               </a>
             ))}
+            <AboutMenu
+              jumpAbout={jumpAbout}
+              setIsOpen={setIsOpen}
+              isOpen={isOpen}
+            />
             <LoginForm2 jumpToForm={jumpToForm} />
           </div>
         )}

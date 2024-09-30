@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function About() {
+export default function AboutMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const menuItemsBar = [
@@ -15,14 +15,16 @@ export default function About() {
 
   return (
     <div
-      className="flex items-center gap-3 relative max-md:hidden"
+      className="flex items-center gap-3 relative pl-6 h-[40px]"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="flex items-center gap-3">
         <a
           onClick={jumpAbout}
-          className={`hover:bg-white cursor-pointer ${isOpen ? "bg-white" : ""}`}
+          className={`hover:bg-white cursor-pointer ${
+            isOpen ? "bg-white" : ""
+          }`}
         >
           Бидний тухай
         </a>
